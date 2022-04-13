@@ -33,6 +33,5 @@ HOW TO CHECK CORRECT ANSWER?
 
 15. If currentIndex >= questions.length -> Set state gameEnded to True.
 
-
-
+///Add color switch feature - Right = Green, Red = false
 

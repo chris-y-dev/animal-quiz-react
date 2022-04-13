@@ -1,0 +1,54 @@
+*{
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+  width: 100%;
+}
+
+body{
+  width: 100%;
+  margin: 0;
+  color: white;
+  background-color: rgb(44, 67, 44);
+}
+
+h1{
+  margin-bottom: 30px;
+  margin-top: 60px;
+}
+
+.question{
+  margin: 50px auto;
+  background-color: rgb(124, 151, 124);
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
+}
+
+#correctButton {
+  color: green;
+}
+
+#wrongButton {
+  color: red;
+}
+
+button {
+  width: 300px;
+  margin: 20px;
+  font-size: 1rem;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+}
+
+.quizbody{
+background-color: rgb(44, 67, 44);
+text-align: center;
+margin: auto;
+max-width: 800px;
+}

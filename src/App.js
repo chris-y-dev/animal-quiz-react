@@ -16,13 +16,16 @@ function App() {
     .then(res => res.json())
     .then((data) => {
       setQuestions(data.results);
-    });
+    })
   }, [])
+
+
+  //adding a new key/value property - Shuffled Answers
 
   function handleAnswer(value){
     const newIndex = currentIndex + 1
 
-    //Check answer
+    //Check answer + set score
     if (value===questions[currentIndex].correct_answer){
       setScore(score + 1);
       console.log('CORRECT');
@@ -30,23 +33,35 @@ function App() {
       console.log('WRONG');
     }
 
-    //Handle index and questions
-    if (newIndex >= questions.length){
-      setGameEnded(true);
-    } else {
-      setCurrentIndex(newIndex);
-    }
-    console.log(score, currentIndex);
+    //Make new question wait before rendering
+    setTimeout(()=>{
+    //Render question VS final page?
+      if (newIndex >= questions.length){
+        setGameEnded(true);
+      } else {
+        setCurrentIndex(newIndex);
+      }
+      console.log(score, currentIndex);
+    }, 2000)
   }
+
+  function shuffleArray(array){
+    for (let i = array.length-1; i>0; i--){
+        const newi = Math.floor(Math.random() * (i+1));
+        [array[i], array[newi]] = [array[newi], array[i]];
+    }
+    console.log(`post shuffle ${array}`);
+    return array;
+}
 
   return gameEnded? (
     <Score score={score}/>
   ) : (
     questions.length>0?(
-      <div>
+      <div className="quizbody">
         <h1>My React Quiz</h1>
         <Question data={questions[currentIndex]} />
-        <Answers data={questions[currentIndex]} onChoose={handleAnswer}/>
+        <Answers onChoose={handleAnswer} data={questions[currentIndex]} />
       </div>
     ) : (
       <div>
