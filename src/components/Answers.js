@@ -1,21 +1,12 @@
 import React, {useEffect, useState} from 'react';
 
-function Answers({handleClick, data, onChoose}){
+function Answers({handleClick, shuffledArray, onChoose, data}){
     const [displayColor, setDisplayColor] = useState(false)
 
     const correct_answer = data.correct_answer;
-    const incorrect_answers = data.incorrect_answers 
-    const array = [correct_answer, ...incorrect_answers]
+    const incorrect_answers = data.incorrect_answers; 
 
-    // function to RANDOMIZE question order
-    function shuffleArray(array){
-        for (let i = array.length-1; i>0; i--){
-            const newi = Math.floor(Math.random() * (i+1));
-            [array[i], array[newi]] = [array[newi], array[i]];
-        }
-        console.log(`post shuffle ${array}`);
-        return array;
-    }
+    const array=shuffledArray;
         
     
     function handleClick(event){
@@ -23,7 +14,7 @@ function Answers({handleClick, data, onChoose}){
         setDisplayColor(true);
             setTimeout(()=>{
                 setDisplayColor(false)
-            }, 2000);
+            }, 1200);
      
     }
 

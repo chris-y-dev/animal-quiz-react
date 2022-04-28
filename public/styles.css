@@ -52,3 +52,65 @@ text-align: center;
 margin: auto;
 max-width: 800px;
 }
+
+.headers{
+  text-align: center;
+}
+
+.score-body{
+  height:100%;
+}
+
+.login_container{
+  width: 70%;
+  max-width: 600px;
+  margin: 30% auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.login_container input{
+  width: 200px;
+}
+
+.login_row{
+  width: 100%;
+  margin: 20px auto;
+}
+
+.login_row label{
+  display: inline-block;
+  width: 80px;
+  margin-right: 10px;
+  text-align: right;
+}
+
+.login_container button,
+.playAgain_btn{
+  width: 100px;
+  height: 40px;
+  display: inline-block;
+}
+
+.leaderboard{
+  background-color: rgb(124, 151, 124);
+  width: 70%;
+  max-width: 500px;
+  margin: auto;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.leaderboard p{
+  font-size: 20px;
+  margin: 15px 0;
+  text-align: left;
+  margin-left: 50px;
+}
+
+.button_container{
+  width: 100%;
+  text-align: center;
+  height: 200px;
+}
