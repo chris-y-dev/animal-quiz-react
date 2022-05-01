@@ -1,6 +1,7 @@
 {
   "name": "my-react-quiz",
   "version": "0.1.0",
+  "proxy": "http://localhost:3001/",
   "private": true,
   "dependencies": {
     "cra-template": "1.1.3",

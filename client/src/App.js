@@ -4,16 +4,18 @@ import Answers from "./components/Answers";
 import Score from "./components/Score"; 
 import Login from "./components/Login"
 import Leaderboard from "./components/Leaderboard";
+import SignUp from "./components/Signup";
+import StartPage from "./components/StartPage";
 
 const API_URL = 'https://opentdb.com/api.php?amount=10&category=27&difficulty=easy&type=multiple'
 
 function App() {
   const [questions, setQuestions] = useState([]);
-  const [answers, setAnswers] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
-  const [gameEnded, setGameEnded] = useState(true);
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [gameEnded, setGameEnded] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedInUserData, setLoggedInUserData]= useState({})
 
   useEffect(()=>{
     fetch(API_URL)
@@ -33,7 +35,8 @@ function App() {
     return array;
 }
 
-  //adding a new key/value property - Shuffled Answers
+  //fetch function to save data online
+
 
   function handleAnswer(value){
     const newIndex = currentIndex + 1
@@ -67,11 +70,19 @@ function App() {
     return array;
   }
 
-  function handleLogin(loginData){
-    console.log(loginData.username, loginData.password);
 
-    //CHECK LOGIN DATA
+  function handleLogin(){
+    // console.log(loginData.username, loginData.password);
     setLoggedIn(true)
+  }
+
+  function handleSignup(signupData){
+    console.log('signup clicked');
+  }
+
+  function getUserData(user){
+    setLoggedInUserData(user)
+    console.log(user);
   }
 
   function restartQuiz(){
@@ -81,10 +92,12 @@ function App() {
     setCurrentIndex(0);
   }
 
+  //<Login handleLogin={handleLogin}/>
+
   return loggedIn?(
     gameEnded? (
         <div>
-          <Score score={score}/>
+          <Score finalScore={score} loggedInUserData={loggedInUserData}/>
           <Leaderboard restartQuiz={restartQuiz} />
         </div>
       ) : (
@@ -101,7 +114,7 @@ function App() {
               )
             )
   ) : (
-    <Login handleLogin={handleLogin}/>
+    <StartPage handleLogin={handleLogin} handleSignup={handleSignup} getUserData={getUserData}/>
   )
 }
 
