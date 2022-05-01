@@ -61,16 +61,6 @@ function App() {
     }, 1200)
   }
 
-  function shuffleArray(array){
-    for (let i = array.length-1; i>0; i--){
-        const newi = Math.floor(Math.random() * (i+1));
-        [array[i], array[newi]] = [array[newi], array[i]];
-    }
-    console.log(`post shuffle ${array}`);
-    return array;
-  }
-
-
   function handleLogin(){
     // console.log(loginData.username, loginData.password);
     setLoggedIn(true)
