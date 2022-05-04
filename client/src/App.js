@@ -41,6 +41,7 @@ function App() {
   function handleAnswer(value){
     const newIndex = currentIndex + 1
 
+    setTimeout(()=>{
     //Check answer + set score
     if (value===questions[currentIndex].correct_answer){
       setScore(score + 1);
@@ -50,7 +51,6 @@ function App() {
     }
 
     //Make new question wait before rendering
-    setTimeout(()=>{
     //Render question VS final page?
       if (newIndex >= questions.length){
         setGameEnded(true);
@@ -76,10 +76,8 @@ function App() {
   }
 
   function restartQuiz(){
-    setGameEnded(false);
-    setLoggedIn(false);
-    setScore(0);
-    setCurrentIndex(0);
+    document.location.href="/";
+   
   }
 
   //<Login handleLogin={handleLogin}/>
