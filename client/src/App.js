@@ -13,7 +13,7 @@ function App() {
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
-  const [gameEnded, setGameEnded] = useState(false);
+  const [gameEnded, setGameEnded] = useState(true);
   const [loggedIn, setLoggedIn] = useState(false);
   const [loggedInUserData, setLoggedInUserData]= useState({})
 

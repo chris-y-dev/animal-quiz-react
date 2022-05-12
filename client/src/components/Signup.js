@@ -54,7 +54,7 @@ function SignUp({handleSignup}) {
                     </div>
                     <div className='login_row'>
                         <label id="input_label">Password: </label>
-                        <input type="text" name="password" id="password" maxLength="5"/>
+                        <input type="password" name="password" id="password" maxLength="5"/>
                     </div>
                     <button type="submit">Start</button>
                     <button type="button" id="signupCloseBtn">Close</button>

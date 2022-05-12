@@ -33,8 +33,7 @@ function Score({finalScore, loggedInUserData}){
 
     return (
         <div className="score-body">
-            <h1 className="headers">Your score was:</h1>
-            <h1 className="headers">{finalScore}</h1>
+            <h1 className="headers">Your score was: {finalScore}</h1>
         </div>
     )
 }

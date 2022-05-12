@@ -58,7 +58,7 @@ function Login({handleLogin, getUserData}) {
                     </div>
                     <div className='login_row'>
                         <label id="input_label">Password: </label>
-                        <input type="text" name="password" id="password" maxLength="5"/>
+                        <input type="password" name="password" id="password" maxLength="5"/>
                     </div>
                     <p>
                     <button type="submit">Start</button>

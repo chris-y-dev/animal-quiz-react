@@ -94,6 +94,19 @@ const handleLogin = async function(req,res){
 app.post('/login', handleLogin)
 
 
+//////////Fetch database for leaderboard
+app.get('/database', (req,res) => {
+    User.find({ })
+        .then((data) => {
+            //console.log("Data: ", data);
+            res.json(data);
+        })
+        .catch((error) => {
+        console.log('error: ', error);
+        })
+});
+
+
 
 app.post('/signup', (req,res)=> {
     console.log(req.body);

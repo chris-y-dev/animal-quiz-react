@@ -64,7 +64,7 @@ max-width: 800px;
 .login_container{
   width: 70%;
   max-width: 600px;
-  margin: 30% auto;
+  margin: 250px auto;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -103,6 +103,10 @@ max-width: 800px;
   border-radius: 4px;
 }
 
+.leaderboard_title{
+  text-align: center;
+}
+
 .leaderboard p{
   font-size: 20px;
   margin: 15px 0;
@@ -122,7 +126,7 @@ max-width: 800px;
   width: 70%;
   max-width: 600px;
   margin: auto;
-  margin-top: 20%;
+  margin-top: 250px;
   text-align: center;
 }
 
@@ -142,6 +146,21 @@ max-width: 800px;
   background-color: white;
   width: 80%;
   padding: 20px;
-  margin: 15% auto;
+  margin: auto;
+  position: fixed;
 }
 
+.leaderboard_header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Profiles */
+.profile{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
