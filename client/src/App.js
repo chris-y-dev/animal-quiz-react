@@ -13,7 +13,7 @@ function App() {
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
-  const [gameEnded, setGameEnded] = useState(true);
+  const [gameEnded, setGameEnded] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
   const [loggedInUserData, setLoggedInUserData]= useState({})
 
@@ -31,7 +31,7 @@ function App() {
         const newi = Math.floor(Math.random() * (i+1));
         [array[i], array[newi]] = [array[newi], array[i]];
     }
-    console.log(`post shuffle ${array}`);
+    console.log(`after shuffle: ${array}`);
     return array;
 }
 

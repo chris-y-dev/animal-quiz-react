@@ -5,7 +5,6 @@ import React from 'react';
 function Login({handleLogin, getUserData}) {
     async function loginDatabase(input){
         try{
-                //UNAME PW NOT SAVING?
             const fetchData = await fetch('/login', {
                 method: 'POST',
                 headers: {
@@ -17,7 +16,7 @@ function Login({handleLogin, getUserData}) {
             const fetchResponse = await fetchData.json()
             console.log(fetchResponse)
             
-///////////////////////////////////return object for App state
+            /////////////////return object for App state
             //check password validity + set state
             if (fetchResponse.validPassword===true){
                 //calls function in App (sets Login true)

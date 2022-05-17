@@ -5,19 +5,15 @@ function Score({finalScore, loggedInUserData}){
     //post data to update database
     async function updateScore(score, username){
         try{
-
             const newScore = loggedInUserData.score + score;
-
             const updateData = {username: username, score: newScore}
-            
             const response = await fetch('/saveScore', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(updateData)
-            })
-            
+            })  
             const fetchresponse = await response.json()
             console.log(fetchresponse);
         }catch(err){
