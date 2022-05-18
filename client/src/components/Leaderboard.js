@@ -22,7 +22,7 @@ function Leaderboard({restartQuiz}){
         fetch('/database')
         .then(res => res.json())
         .then((data) => {
-          setQuestions(data);
+            setLeaderboard(data);
         })
 
 
