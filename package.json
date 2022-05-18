@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "heroku-postbuild": "cd client && npm install",
+    "heroku-postbuild": "/client && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "cd client && npm install && npm run build",
+    "build": "cd client && npm run build",
     "dev": "nodemon server.js"
   },
   "author": "",
