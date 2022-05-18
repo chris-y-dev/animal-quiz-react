@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3001
 const saltRounds = 10
 
 //Connect to mongo atlas
-mongoose.connect("mongodb+srv://adng2509:adung2509@cluster0.xi3nn.mongodb.net/UserDB?retryWrites=true&w=majority", { useNewUrlParser: true})
+mongoose.connect("mongodb+srv://admin-chris:admin1@cluster0.4khty.mongodb.net/tepQuiz", { useNewUrlParser: true})
 
 
 const app = express()
