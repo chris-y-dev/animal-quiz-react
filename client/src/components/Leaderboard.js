@@ -23,6 +23,7 @@ function Leaderboard({restartQuiz}){
         .then(res => res.json())
         .then((data) => {
           setQuestions(data);
+        })
 
 
         // getAllUsers();
