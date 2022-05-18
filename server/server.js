@@ -108,7 +108,9 @@ const retrieveData = async function(req,res){
     try{
         const data = await User.find({});
         console.log(data)
-        res.json(data);
+        const jsonData = data.json();
+
+        return(jsonData);
     }catch(err){
             console.error(err);
         }
