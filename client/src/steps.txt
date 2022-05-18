@@ -1,0 +1,37 @@
+1. add api url
+
+2. Render rough components in App.js
+
+3. Set state for question
+
+4. useEffect and fetch data from api
+
+5. Set state to the Array
+
+6. BUT not renedered yet because first load = fetch.
+    need to use if questions.length > 0
+
+7. send questions (state) as prop to Components
+
+RANDOMIZE
+8. Randomise order: Combine correct + incorrect into one Array. Use function To shuffle + map to render.
+
+9. For each button, use dangerouslySetInnerHTML={{__html: CONTENT}} to render all symbols as __html
+
+10. Create onClick function -> if value === correct_answer then return correct
+
+In App:
+11. Create newState => Current Index
+    Start with 0, set + 1
+
+12. Create new function to set state. Pass this function to Answers to call onClick.
+
+HOW TO CHECK CORRECT ANSWER?
+13. Create a score state (0). If value === corrent_answer -> set +1
+
+14. Create something to be rendered when questions array is at max index
+
+15. If currentIndex >= questions.length -> Set state gameEnded to True.
+
+///Add color switch feature - Right = Green, Red = false
+

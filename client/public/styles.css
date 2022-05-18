@@ -1,0 +1,166 @@
+*{
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+  width: 100%;
+}
+
+body{
+  width: 100%;
+  margin: 0;
+  color: white;
+  background-color: rgb(44, 67, 44);
+}
+
+h1{
+  margin-bottom: 30px;
+  margin-top: 60px;
+}
+
+.question{
+  margin: 50px auto;
+  background-color: rgb(124, 151, 124);
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
+}
+
+#correctButton {
+  color: green;
+}
+
+#wrongButton {
+  color: red;
+}
+
+button {
+  width: 300px;
+  margin: 20px;
+  font-size: 1rem;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+}
+
+.quizbody{
+background-color: rgb(44, 67, 44);
+text-align: center;
+margin: auto;
+max-width: 800px;
+}
+
+.headers{
+  text-align: center;
+}
+
+.score-body{
+  height:100%;
+}
+
+.login_container{
+  width: 70%;
+  max-width: 600px;
+  margin: 250px auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(124, 151, 124);
+}
+
+.login_container input{
+  width: 200px;
+}
+
+.login_row{
+  width: 100%;
+  margin: 20px auto;
+}
+
+.login_row label{
+  display: inline-block;
+  width: 80px;
+  margin-right: 10px;
+  text-align: right;
+}
+
+.login_container button,
+.playAgain_btn{
+  width: 100px;
+  height: 40px;
+  display: inline-block;
+}
+
+.leaderboard{
+  background-color: rgb(124, 151, 124);
+  width: 70%;
+  max-width: 500px;
+  margin: auto;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.leaderboard_title{
+  text-align: center;
+}
+
+.leaderboard p{
+  font-size: 20px;
+  margin: 15px 0;
+  text-align: left;
+  margin-left: 50px;
+}
+
+.button_container{
+  width: 100%;
+  text-align: center;
+  height: 200px;
+}
+
+/* StartPage */
+
+.startPage_container{
+  width: 70%;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 250px;
+  text-align: center;
+}
+
+.modal{
+  display:none;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-container{
+  background-color: white;
+  width: 80%;
+  padding: 20px;
+  margin: auto;
+  position: fixed;
+}
+
+.leaderboard_header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Profiles */
+.profile{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
