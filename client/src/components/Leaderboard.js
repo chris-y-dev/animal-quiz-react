@@ -8,10 +8,12 @@ function Leaderboard({restartQuiz}){
         //Fetch API here
         async function getAllUsers(){
             try{
-                const fetchData = await fetch('/database');
-                const data = await fetchData.json();
+                const fetchData = await fetch('/database', {
+                    method: 'GET'
+                });
+                console.log(fetchData)
 
-                setLeaderboard(data);
+                setLeaderboard(fetchData);
             } catch(err){
                 console.err(err)
             }
