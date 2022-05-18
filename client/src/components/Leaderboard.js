@@ -12,8 +12,8 @@ function Leaderboard({restartQuiz}){
                     method: 'GET'
                 });
                 console.log(fetchData)
-
-                setLeaderboard(fetchData);
+                const data = fetchData.json();
+                setLeaderboard(data);
             } catch(err){
                 console.err(err)
             }
