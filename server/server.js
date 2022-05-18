@@ -104,18 +104,17 @@ const handleLogin = async function(req,res){
 app.post('/login', handleLogin)
 
 
-//////////Fetch database for leaderboard
-app.get('/database', (req,res) => {
-    User.find({ })
-        .then((data) => {
-            //console.log("Data: ", data);
-            res.json(data);
-        })
-        .catch((error) => {
-        console.log('error: ', error);
-        })
-});
+const retrieveData = async function(req,res){
+    try{
+        const data = await User.find({})
+        res.json(data);
+    }catch(err){
+            console.error(err);
+        }
+}
 
+//////////Fetch database for leaderboard
+app.get('/database', retrieveData);
 
 
 app.post('/signup', (req,res)=> {
@@ -156,12 +155,15 @@ app.post('/signup', (req,res)=> {
 
 })
 
+const saveScore = async function(req, res){
+    
+}
 
 app.post('/saveScore', (req,res)=>{
     
     const username = req.body.username
     const score = req.body.score
-    User.updateOne({username: username}, {score: score}, function(err, doc){
+    User.updateOne({username: username}, {score: score}, async function(err, doc){
         if (err){
             console.log(err)
         } else{
