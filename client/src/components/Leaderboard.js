@@ -6,20 +6,26 @@ function Leaderboard({restartQuiz}){
 
     useEffect(()=>{
         //Fetch API here
-        async function getAllUsers(){
-            try{
-                const fetchData = await fetch('/database', {
-                    method: 'GET'
-                });
-                console.log(fetchData)
-                const data = await fetchData.json();
-                setLeaderboard(data);
-            } catch(err){
-                console.err(err)
-            }
-        }
+        // async function getAllUsers(){
+        //     try{
+        //         const fetchData = await fetch('/database', {
+        //             method: 'GET'
+        //         });
+        //         console.log(fetchData)
+        //         const data = await fetchData.json();
+        //         setLeaderboard(data);
+        //     } catch(err){
+        //         console.err(err)
+        //     }
+        // }
 
-        getAllUsers();
+        fetch('/database')
+        .then(res => res.json())
+        .then((data) => {
+          setQuestions(data);
+
+
+        // getAllUsers();
 
         // fetch('/database')
         //     .then(res => {
