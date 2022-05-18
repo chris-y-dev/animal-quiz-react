@@ -106,7 +106,8 @@ app.post('/login', handleLogin)
 
 const retrieveData = async function(req,res){
     try{
-        const data = await User.find();
+        const data = await User.find({});
+        console.log(data)
         return(data);
     }catch(err){
             console.error(err);
