@@ -6,13 +6,26 @@ function Leaderboard({restartQuiz}){
 
     useEffect(()=>{
         //Fetch API here
-        fetch('/database')
-            .then(res => {
-                return res.json();
-            })
-            .then(data => {
+        async function getAllUsers(){
+            try{
+                const fetchData = await fetch('/database');
+                const data = await fetchData.json();
+
                 setLeaderboard(data);
-            })
+            } catch(err){
+                console.err(err)
+            }
+        }
+
+        getAllUsers();
+
+        // fetch('/database')
+        //     .then(res => {
+        //         return res.json();
+        //     })
+        //     .then(data => {
+        //         setLeaderboard(data);
+        //     })
         console.log('Fetching data');
     }, [])
 
