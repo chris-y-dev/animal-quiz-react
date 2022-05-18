@@ -14,6 +14,8 @@ const app = express()
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.json())
 
+app.use(express.static(__dirname + '/client'));
+
 
 const searchDatabase = async function(username){
     try{
