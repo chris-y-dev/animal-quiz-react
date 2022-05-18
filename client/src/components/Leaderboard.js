@@ -12,7 +12,7 @@ function Leaderboard({restartQuiz}){
                     method: 'GET'
                 });
                 console.log(fetchData)
-                const data = fetchData.json();
+                const data = await fetchData.json();
                 setLeaderboard(data);
             } catch(err){
                 console.err(err)
