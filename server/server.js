@@ -109,7 +109,7 @@ const retrieveData = async function(req,res){
         const data = await User.find({});
         console.log(data)
         const jsonData = await data.json();
-
+        console.log(jsonData)
         res.sendFile(jsonData);
     }catch(err){
             console.error(err);
