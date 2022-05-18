@@ -6,7 +6,7 @@
     "heroku-postbuild": "/client && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "cd client && npm run build",
+    "build": "cd client && npm start",
     "dev": "nodemon server.js"
   },
   "author": "",
