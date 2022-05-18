@@ -19,7 +19,12 @@ function Leaderboard({restartQuiz}){
         //     }
         // }
 
-        fetch('/database')
+        fetch('/database', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
         .then(res => res.json())
         .then((data) => {
             setLeaderboard(data);
