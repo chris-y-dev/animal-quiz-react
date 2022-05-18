@@ -108,9 +108,9 @@ const retrieveData = async function(req,res){
     try{
         const data = await User.find({});
         console.log(data)
-        const jsonData = data.json();
+        const jsonData = await data.json();
 
-        res.json(data);
+        res.sendFile(jsonData);
     }catch(err){
             console.error(err);
         }
@@ -158,9 +158,6 @@ app.post('/signup', (req,res)=> {
 
 })
 
-const saveScore = async function(req, res){
-    
-}
 
 app.post('/saveScore', (req,res)=>{
     
